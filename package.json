@@ -31,7 +31,7 @@
     "@rspack/core": "2.0.1",
     "esbuild": "0.28.0",
     "parcel": "2.16.4",
-    "rolldown": "1.0.0-rc.17",
+    "rolldown": "1.0.0-rc.18",
     "rollup": "4.60.2",
     "vite": "8.0.10"
   }
