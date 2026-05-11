@@ -28,7 +28,7 @@
     "@parcel/core": "2.16.4",
     "@rollup/plugin-commonjs": "29.0.2",
     "@rsbuild/core": "2.0.3",
-    "@rspack/core": "2.0.1",
+    "@rspack/core": "2.0.2",
     "esbuild": "0.28.0",
     "parcel": "2.16.4",
     "rolldown": "1.0.0",
