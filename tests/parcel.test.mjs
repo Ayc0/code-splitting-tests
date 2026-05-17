@@ -8,6 +8,12 @@ import { Parcel } from '@parcel/core';
 test("builds and tree-shakes using parcel", async (t) => {
     await using dir = await fs.mkdtempDisposable('vite');
 
+    // Parcel forwards process.execArgv to its Worker threads, but Node 24 / CI
+    // runners inject flags (e.g. --node-snapshot, --secure-heap, --tls-cipher-list)
+    // that the Worker constructor rejects with ERR_WORKER_INVALID_EXEC_ARGV.
+    // See https://github.com/parcel-bundler/parcel/issues/10238
+    process.execArgv = [];
+
     let bundler = new Parcel({
         entries: 'src/index.js',
         defaultConfig: '@parcel/config-default',
