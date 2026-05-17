@@ -4,3 +4,5 @@ allowBuilds:
   esbuild: false
   lmdb: false
   msgpackr-extract: false
+patchedDependencies:
+  '@parcel/workers@2.16.4': patches/@parcel__workers@2.16.4.patch

@@ -1,0 +1,13 @@
+diff --git a/lib/Worker.js b/lib/Worker.js
+index c09b1c47e513e4b3c12f9fef6383c56c8b064406..9b0c25352b17756c30bf1969a9cd01b9406a98b7 100644
+--- a/lib/Worker.js
++++ b/lib/Worker.js
+@@ -44,7 +44,7 @@ class Worker extends _events().default {
+   async fork(forkModule) {
+     let filteredArgs = [];
+     if (process.execArgv) {
+-      filteredArgs = process.execArgv.filter(v => !/^--(debug|inspect|no-opt|max-old-space-size=|max-semi-space-size=|expose-gc)/.test(v));
++      filteredArgs = process.execArgv.filter(v => !/^--(debug|inspect|no-opt|max-old-space-size=|max-semi-space-size=|expose-gc|tls-cipher-list=|v8-pool-size=|trace-event-file-pattern=|secure-heap(-min)?=|node-snapshot|use-largepages=|stack-trace-limit=)/.test(v));
+       for (let i = 0; i < filteredArgs.length; i++) {
+         let arg = filteredArgs[i];
+         let isArgWithParam = (arg === '-r' || arg === '--require') && filteredArgs[i + 1] === '@parcel/register' || arg === '--title';

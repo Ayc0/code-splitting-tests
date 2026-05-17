@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@parcel/workers@2.16.4': 61891ce1f79a3a92c9e63653420bb747319b3e99666288cb1aa6295932e31280
+
 importers:
 
   .:
@@ -1720,7 +1723,7 @@ snapshots:
       '@parcel/source-map': 2.1.1
       '@parcel/types': 2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.21))
       '@parcel/utils': 2.16.4
-      '@parcel/workers': 2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.21))
+      '@parcel/workers': 2.16.4(patch_hash=61891ce1f79a3a92c9e63653420bb747319b3e99666288cb1aa6295932e31280)(@parcel/core@2.16.4(@swc/helpers@0.5.21))
       base-x: 3.0.11
       browserslist: 4.28.2
       clone: 2.1.2
@@ -1753,7 +1756,7 @@ snapshots:
       '@parcel/types-internal': 2.16.4
       '@parcel/utils': 2.16.4
       '@parcel/watcher': 2.5.6
-      '@parcel/workers': 2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.21))
+      '@parcel/workers': 2.16.4(patch_hash=61891ce1f79a3a92c9e63653420bb747319b3e99666288cb1aa6295932e31280)(@parcel/core@2.16.4(@swc/helpers@0.5.21))
     transitivePeerDependencies:
       - napi-wasm
 
@@ -1822,7 +1825,7 @@ snapshots:
       '@parcel/plugin': 2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.21))
       '@parcel/rust': 2.16.4
       '@parcel/utils': 2.16.4
-      '@parcel/workers': 2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.21))
+      '@parcel/workers': 2.16.4(patch_hash=61891ce1f79a3a92c9e63653420bb747319b3e99666288cb1aa6295932e31280)(@parcel/core@2.16.4(@swc/helpers@0.5.21))
     transitivePeerDependencies:
       - napi-wasm
 
@@ -1857,7 +1860,7 @@ snapshots:
       '@parcel/node-resolver-core': 3.7.4(@parcel/core@2.16.4(@swc/helpers@0.5.21))
       '@parcel/types': 2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.21))
       '@parcel/utils': 2.16.4
-      '@parcel/workers': 2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.21))
+      '@parcel/workers': 2.16.4(patch_hash=61891ce1f79a3a92c9e63653420bb747319b3e99666288cb1aa6295932e31280)(@parcel/core@2.16.4(@swc/helpers@0.5.21))
       '@swc/core': 1.15.32(@swc/helpers@0.5.21)
       semver: 7.7.4
     transitivePeerDependencies:
@@ -2094,7 +2097,7 @@ snapshots:
       '@parcel/core': 2.16.4(@swc/helpers@0.5.21)
       '@parcel/plugin': 2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.21))
       '@parcel/utils': 2.16.4
-      '@parcel/workers': 2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.21))
+      '@parcel/workers': 2.16.4(patch_hash=61891ce1f79a3a92c9e63653420bb747319b3e99666288cb1aa6295932e31280)(@parcel/core@2.16.4(@swc/helpers@0.5.21))
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - napi-wasm
@@ -2107,7 +2110,7 @@ snapshots:
       '@parcel/rust': 2.16.4
       '@parcel/source-map': 2.1.1
       '@parcel/utils': 2.16.4
-      '@parcel/workers': 2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.21))
+      '@parcel/workers': 2.16.4(patch_hash=61891ce1f79a3a92c9e63653420bb747319b3e99666288cb1aa6295932e31280)(@parcel/core@2.16.4(@swc/helpers@0.5.21))
       '@swc/helpers': 0.5.21
       browserslist: 4.28.2
       nullthrows: 1.1.1
@@ -2189,7 +2192,7 @@ snapshots:
   '@parcel/types@2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.21))':
     dependencies:
       '@parcel/types-internal': 2.16.4
-      '@parcel/workers': 2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.21))
+      '@parcel/workers': 2.16.4(patch_hash=61891ce1f79a3a92c9e63653420bb747319b3e99666288cb1aa6295932e31280)(@parcel/core@2.16.4(@swc/helpers@0.5.21))
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
@@ -2267,7 +2270,7 @@ snapshots:
       '@parcel/watcher-win32-ia32': 2.5.6
       '@parcel/watcher-win32-x64': 2.5.6
 
-  '@parcel/workers@2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.21))':
+  '@parcel/workers@2.16.4(patch_hash=61891ce1f79a3a92c9e63653420bb747319b3e99666288cb1aa6295932e31280)(@parcel/core@2.16.4(@swc/helpers@0.5.21))':
     dependencies:
       '@parcel/core': 2.16.4(@swc/helpers@0.5.21)
       '@parcel/diagnostic': 2.16.4
