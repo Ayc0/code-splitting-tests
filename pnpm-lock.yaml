@@ -12,8 +12,8 @@ importers:
   .:
     devDependencies:
       '@datadog/datadog-ci':
-        specifier: ^5.16.0
-        version: 5.16.0
+        specifier: ^5.16.1
+        version: 5.16.1
       '@parcel/config-default':
         specifier: 2.16.4
         version: 2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.21))(@swc/helpers@0.5.21)
@@ -47,8 +47,8 @@ importers:
 
 packages:
 
-  '@datadog/datadog-ci@5.16.0':
-    resolution: {integrity: sha512-0ykDASeq6cM9LAZibf/n8VxyVYLFGSCGmepuY0tLzcFHZuob2hszN++C8R91afW3cOTy/fKWHdDADFKv4qD1RQ==}
+  '@datadog/datadog-ci@5.16.1':
+    resolution: {integrity: sha512-Uz6gS0hl4zG3I2JEBTsmpPZbURaA8kVs+09xFxcCsnWK6t7zvjWUksG5GKS2woWRYnaFb+54SFfQ3rMyaVagcw==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -1479,7 +1479,7 @@ packages:
 
 snapshots:
 
-  '@datadog/datadog-ci@5.16.0': {}
+  '@datadog/datadog-ci@5.16.1': {}
 
   '@emnapi/core@1.10.0':
     dependencies:
