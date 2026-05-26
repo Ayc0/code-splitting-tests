@@ -20,14 +20,14 @@ And we test this using 4 different scenarios
 
 ### Tests
 
-|                                                              |                          `esbuild`                          |      `parcel`      |       `rollup`       |                                    `rspack`                                    |         `vite`          |     `rolldown`      |                                  `rsbuild`                                   |             `bun`             |
-| ------------------------------------------------------------ | :---------------------------------------------------------: | :----------------: | :------------------: | :----------------------------------------------------------------------------: | :---------------------: | :-----------------: | :--------------------------------------------------------------------------: | :---------------------------: |
-| Compilation time (avg on 25 runs)                            |                     17.4ms<br>(±1.69ms)                     | 480ms<br>(±3.83ms) | 36.1ms<br>(±0.866ms) |                              39.3ms<br>(±2.68ms)                               |  38.3ms<br>(±0.685ms)   | 11.6ms<br>(±2.30ms) |                             59.4ms<br>(±2.17ms)                              | 43.8ms<br>(±3.60ms) <tr></tr> |
-| <pre>const { bar } = require('./foo')</pre>                  |                             ❌                              |         ✅         |          ❌          | ✅<br>[`>=2.0.0-beta.6`](https://github.com/web-infra-dev/rspack/issues/11226) |           ❌            |         ❌          | ✅<br>[`>=2.0.0-beta.8`](https://github.com/web-infra-dev/rsbuild/pull/7307) |         ❌ <tr></tr>          |
-| <pre>import { bar } from './foo'</pre>                       |                             ✅                              |         ✅         |          ✅          |                                       ✅                                       |           ✅            |         ✅          |                                      ✅                                      |         ✅ <tr></tr>          |
-| <pre>const { bar } =&#13;  await import('./foo')</pre>       | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |         ✅         |          ✅          |                                       ✅                                       |           ✅            |         ✅          |                                      ✅                                      |         ❌ <tr></tr>          |
-| <pre>import('./foo')&#13;  .then(module => module.bar)</pre> | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |         ✅         |          ✅          |     ✅<br>[`>=1.5.6`](https://github.com/web-infra-dev/rspack/pull/11665)      | ✅<br>`>=8.0.0-beta.15` |         ✅          |                               ✅<br>`>=1.5.11`                               |         ❌ <tr></tr>          |
-| <pre>import('./foo')&#13;  .then(({ bar }) => bar)</pre>     | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |         ✅         |          ✅          |     ✅<br>[`>=1.5.6`](https://github.com/web-infra-dev/rspack/pull/11665)      |           ✅            |         ✅          |                               ✅<br>`>=1.5.11`                               |              ❌               |
+|                                                              |                          `esbuild`                          |      `parcel`      |      `rollup`       |                                    `rspack`                                    |         `vite`          |      `rolldown`      |                                  `rsbuild`                                   |             `bun`             |
+| ------------------------------------------------------------ | :---------------------------------------------------------: | :----------------: | :-----------------: | :----------------------------------------------------------------------------: | :---------------------: | :------------------: | :--------------------------------------------------------------------------: | :---------------------------: |
+| Compilation time (avg on 25 runs)                            |                     17.9ms<br>(±10.6ms)                     | 485ms<br>(±18.0ms) | 38.7ms<br>(±1.46ms) |                              34.7ms<br>(±2.21ms)                               |   44.4ms<br>(±1.12ms)   | 9.07ms<br>(±0.667ms) |                             60.8ms<br>(±2.86ms)                              | 35.3ms<br>(±17.8ms) <tr></tr> |
+| <pre>const { bar } = require('./foo')</pre>                  |                             ❌                              |         ✅         |         ❌          | ✅<br>[`>=2.0.0-beta.6`](https://github.com/web-infra-dev/rspack/issues/11226) |           ❌            |          ❌          | ✅<br>[`>=2.0.0-beta.8`](https://github.com/web-infra-dev/rsbuild/pull/7307) |         ❌ <tr></tr>          |
+| <pre>import { bar } from './foo'</pre>                       |                             ✅                              |         ✅         |         ✅          |                                       ✅                                       |           ✅            |          ✅          |                                      ✅                                      |         ✅ <tr></tr>          |
+| <pre>const { bar } =&#13;  await import('./foo')</pre>       | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |         ✅         |         ✅          |                                       ✅                                       |           ✅            |          ✅          |                                      ✅                                      |         ❌ <tr></tr>          |
+| <pre>import('./foo')&#13;  .then(module => module.bar)</pre> | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |         ✅         |         ✅          |     ✅<br>[`>=1.5.6`](https://github.com/web-infra-dev/rspack/pull/11665)      | ✅<br>`>=8.0.0-beta.15` |          ✅          |                               ✅<br>`>=1.5.11`                               |         ❌ <tr></tr>          |
+| <pre>import('./foo')&#13;  .then(({ bar }) => bar)</pre>     | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |         ✅         |         ✅          |     ✅<br>[`>=1.5.6`](https://github.com/web-infra-dev/rspack/pull/11665)      |           ✅            |          ✅          |                               ✅<br>`>=1.5.11`                               |              ❌               |
 
 > [!Note]
 > For `require()`, Rollup was computed using the plugin `@rollup/plugin-commonjs` with the option `transformMixedEsModules: true`\
@@ -148,66 +148,66 @@ Those have been ported in the table before, but the last benchmark is available 
 <details><summary>Values</summary>
 
 ```benchmark
-🎉 Benchmark completed in 25.15 seconds
-📄 Results saved to: benchmarks/results-2026-04-27T06:49:17.209Z.csv
+🎉 Benchmark completed in 24.02 seconds
+📄 Results saved to: benchmarks/results-2026-05-26T06:28:03.279Z.csv
 
-📊 Summary Statistics on 10 CPUs Apple M1 Max:
+📊 Summary Statistics on 16 CPUs Apple M4 Max:
 ==================================================
 esbuild (esbuild@0.28.0):
-  Average: 17.4ms
-  Median:  17.5ms
-  Stddev:  1.69ms
-  Min:     14.0ms
-  Max:     20.2ms
+  Average: 17.9ms
+  Median:  15.4ms
+  Stddev:  10.6ms
+  Min:     14.2ms
+  Max:     67.5ms
 
 parcel (@parcel/core@2.16.4):
-  Average: 480ms
+  Average: 485ms
   Median:  480ms
-  Stddev:  3.83ms
-  Min:     472ms
-  Max:     490ms
+  Stddev:  18.0ms
+  Min:     458ms
+  Max:     524ms
 
-rollup (rollup@4.60.2):
-  Average: 36.1ms
-  Median:  35.9ms
-  Stddev:  0.866ms
-  Min:     34.5ms
-  Max:     38.5ms
-
-rspack (@rspack/core@2.0.0):
-  Average: 39.3ms
-  Median:  39.0ms
-  Stddev:  2.68ms
-  Min:     33.7ms
-  Max:     44.1ms
-
-vite (vite@8.0.10):
-  Average: 38.3ms
+rollup (rollup@4.60.4):
+  Average: 38.7ms
   Median:  38.5ms
-  Stddev:  0.685ms
-  Min:     36.9ms
-  Max:     40.4ms
+  Stddev:  1.46ms
+  Min:     36.7ms
+  Max:     44.4ms
 
-rolldown (rolldown@1.0.0-rc.17):
-  Average: 11.6ms
-  Median:  11.3ms
-  Stddev:  2.30ms
-  Min:     7.46ms
-  Max:     17.9ms
+rspack (@rspack/core@2.0.4):
+  Average: 34.7ms
+  Median:  34.1ms
+  Stddev:  2.21ms
+  Min:     32.4ms
+  Max:     43.6ms
 
-rsbuild (@rsbuild/core@2.0.1):
-  Average: 59.4ms
-  Median:  59.3ms
-  Stddev:  2.17ms
-  Min:     56.2ms
-  Max:     65.8ms
+vite (vite@8.0.14):
+  Average: 44.4ms
+  Median:  44.2ms
+  Stddev:  1.12ms
+  Min:     43.3ms
+  Max:     49.1ms
+
+rolldown (rolldown@1.0.2):
+  Average: 9.07ms
+  Median:  8.92ms
+  Stddev:  0.667ms
+  Min:     8.01ms
+  Max:     10.5ms
+
+rsbuild (@rsbuild/core@2.0.7):
+  Average: 60.8ms
+  Median:  59.7ms
+  Stddev:  2.86ms
+  Min:     58.1ms
+  Max:     71.2ms
 
 bun (bun@1.3.9):
-  Average: 43.8ms
-  Median:  44.5ms
-  Stddev:  3.60ms
-  Min:     37.6ms
-  Max:     50.8ms
+  Average: 35.3ms
+  Median:  30.3ms
+  Stddev:  17.8ms
+  Min:     28.3ms
+  Max:     118ms
 
 ```
 
