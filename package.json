@@ -26,7 +26,7 @@
     "@datadog/datadog-ci": "^5.17.0",
     "@parcel/config-default": "2.16.4",
     "@parcel/core": "2.16.4",
-    "@rollup/plugin-commonjs": "29.0.2",
+    "@rollup/plugin-commonjs": "29.0.3",
     "@rsbuild/core": "2.0.9",
     "@rspack/core": "2.0.4",
     "esbuild": "0.28.0",
