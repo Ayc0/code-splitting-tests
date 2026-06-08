@@ -27,7 +27,7 @@
     "@parcel/config-default": "2.16.4",
     "@parcel/core": "2.16.4",
     "@rollup/plugin-commonjs": "29.0.3",
-    "@rsbuild/core": "2.0.9",
+    "@rsbuild/core": "2.0.11",
     "@rspack/core": "2.0.6",
     "esbuild": "0.28.0",
     "parcel": "2.16.4",
