@@ -24,8 +24,8 @@ importers:
         specifier: 29.0.3
         version: 29.0.3(rollup@4.62.0)
       '@rsbuild/core':
-        specifier: 2.0.14
-        version: 2.0.14
+        specifier: 2.0.15
+        version: 2.0.15
       '@rspack/core':
         specifier: 2.0.6
         version: 2.0.6(@swc/helpers@0.5.23)
@@ -1048,8 +1048,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rsbuild/core@2.0.14':
-    resolution: {integrity: sha512-SSPer6vM+v82CV6JXIOzyyT++A1ECgsVvvUuveD5rfGxX/W58vWGnB+zWcYbMfYOjTntD+9ve6QGGh6kBjPx6A==}
+  '@rsbuild/core@2.0.15':
+    resolution: {integrity: sha512-O8vmMhZu1YImO6jOqt/K/vlJSvkq7UtSq5YM1DIlcEd9LW8Gf6/dkQ1B2KPI6F+hSMFBnTTTumdcIowSLCw97g==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -2692,7 +2692,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.62.0':
     optional: true
 
-  '@rsbuild/core@2.0.14':
+  '@rsbuild/core@2.0.15':
     dependencies:
       '@rspack/core': 2.0.8(@swc/helpers@0.5.23)
       '@swc/helpers': 0.5.23
