@@ -11,6 +11,21 @@ updates:
       - Ayc0
     schedule:
       interval: "weekly"
+    groups:
+      bundlers:
+        patterns:
+          - "@rsbuild/core"
+          - "@rspack/core"
+          - "rolldown"
+          - "rollup"
+          - "esbuild"
+          - "vite"
+          - "parcel"
+          - "@parcel/config-default"
+          - "@parcel/core"
+      tooling:
+        patterns:
+          - "@datadog/datadog-ci"
 
   - package-ecosystem: "github-actions"
     directory: "/"
