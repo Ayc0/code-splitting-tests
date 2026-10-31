@@ -27,12 +27,12 @@
     "@parcel/config-default": "2.16.4",
     "@parcel/core": "2.16.4",
     "@rollup/plugin-commonjs": "29.0.3",
-    "@rsbuild/core": "2.2.13",
+    "@rsbuild/core": "2.2.14",
     "@rspack/core": "2.2.9",
     "esbuild": "0.28.2",
     "parcel": "2.16.4",
-    "rolldown": "1.2.13",
-    "rollup": "4.64.6",
-    "vite": "8.3.4"
+    "rolldown": "1.2.15",
+    "rollup": "4.65.1",
+    "vite": "8.3.5"
   }
 }
